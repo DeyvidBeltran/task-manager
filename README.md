@@ -18,7 +18,7 @@ npm run start
 
 ## environment variables
 
-Create an .env file with the following code:
+Create an .env file in the folder (tasks-server) with the following code:
 
 ```javascript
 JWT_SECRET = JWT_SECRET
