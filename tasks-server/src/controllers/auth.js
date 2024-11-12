@@ -18,7 +18,7 @@ const loginUser = async (req, res) => {
 
     const tokenSession = await tokenSign(username)
 
-    if (tokenSession) {
+    if (tokenSession && user) {
       res.json({
         username: user.username,
         password: user.password,
