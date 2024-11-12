@@ -3,15 +3,19 @@ import dotenv from "dotenv"
 dotenv.config()
 
 const tokenSign = async (user) => {
-  return jwt.sign(
-    {
-      name: user,
-    },
-    process.env.JWT_SECRET,
-    {
-      expiresIn: "1h",
-    }
-  )
+  try {
+    return jwt.sign(
+      {
+        name: user,
+      },
+      process.env.JWT_SECRET,
+      {
+        expiresIn: "1h",
+      }
+    )
+  } catch (error) {
+    return error
+  }
 }
 
 const verifyToken = async (token) => {

@@ -6,14 +6,14 @@ First, run the development server, commands are executed on the folder (tasks-se
 
 ```bash
 npm i
-npm run dev
+npm run start
 ```
 
 And run development front, commands are executed on the folder (tasks-front):
 
 ```bash
 npm i
-npm run start
+npm run dev
 ```
 
 ## environment variables
