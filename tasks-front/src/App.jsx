@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react"
 import "./App.css"
-import { TodoList } from "./components/TodoList"
-import { ToDoAdd } from "./components/ToDoAdd"
 import { useToDo } from "./hooks/useToDo"
 import { login } from "./hooks/useLogin"
 import LoginForm from "./components/LoginForm"
@@ -46,28 +44,6 @@ function App() {
         setErrorMessage(null)
       }, 5000)
     }
-  }
-
-  const renderCreateForm = () => {
-    return (
-      <div className="card-to-do">
-        <h1>Lista de Tareas</h1>
-        <div className="counter-todos">
-          <h3>N° de Tareas: {todosCount}</h3>
-          <br></br>
-        </div>
-        <div className="add-todo">
-          <h3>Añadir Tarea</h3>
-          <ToDoAdd handleNewTodo={handleNewTodo} />
-        </div>
-        <TodoList
-          todos={todos}
-          handleUpdateTodo={handleUpdateTodo}
-          handleDeleteTodo={handleDeleteTodo}
-          handleCompleteTodo={handleCompleteTodo}
-        />
-      </div>
-    )
   }
 
   return (
